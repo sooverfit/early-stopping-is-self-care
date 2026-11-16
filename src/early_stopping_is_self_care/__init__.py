@@ -9,6 +9,6 @@ The core has zero dependencies. Framework callbacks live in submodules:
 from .core import Companion, PlateauTracker, compose_roast, roast
 from .diagnose import Diagnosis, diagnose
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = ["Companion", "Diagnosis", "PlateauTracker", "compose_roast", "diagnose", "roast",
            "__version__"]

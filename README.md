@@ -134,6 +134,6 @@ paper, *Early Stopping Is Self-Care*, is here:
 
 ## Made by So Overfit
 
-Merch (our shop): [Early stopping is self-care tee](https://sooverfit.com/products/early-stopping-is-self-care-tee?utm_source=github&utm_medium=readme&utm_campaign=esisc)
+Merch (our shop): [Early stopping is self-care tee](https://sooverfit-clicks.utopian-cabbage.workers.dev/r/20261116-esisc-github)
 
 MIT licensed. Contributions welcome, see [CONTRIBUTING.md](CONTRIBUTING.md).
