@@ -11,8 +11,9 @@ permissions:
 jobs:
   core:
     name: core (no frameworks), Python ${{ matrix.python }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     strategy:
+      fail-fast: false
       matrix:
         python: ["3.9", "3.13"]
     steps:
@@ -25,7 +26,7 @@ jobs:
 
   frameworks:
     name: keras + lightning (CPU)
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       KERAS_BACKEND: torch
     steps:
