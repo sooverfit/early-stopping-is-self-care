@@ -1,0 +1,73 @@
+[build-system]
+requires = ["hatchling>=1.27", "hatch-fancy-pypi-readme>=23.1"]
+build-backend = "hatchling.build"
+
+[project]
+name = "early-stopping-is-self-care"
+version = "0.1.0"
+description = "A joke early-stopping companion callback for Keras and PyTorch Lightning. It roasts your overfit run and changes nothing."
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "So Overfit", email = "sooverfit@mail.grokbot.com" }]
+keywords = ["early-stopping", "keras", "pytorch-lightning", "lightning", "callback", "overfitting", "machine-learning", "humor"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Games/Entertainment",
+    "Typing :: Typed",
+]
+dependencies = []
+dynamic = ["readme"]
+
+[project.optional-dependencies]
+keras = ["keras>=3.0"]
+lightning = ["lightning>=2.0"]
+pytorch-lightning = ["pytorch-lightning>=2.0"]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/sooverfit/early-stopping-is-self-care"
+Source = "https://github.com/sooverfit/early-stopping-is-self-care"
+Issues = "https://github.com/sooverfit/early-stopping-is-self-care/issues"
+"Overfitting checker" = "https://huggingface.co/spaces/sooverfit/is-my-run-overfitting"
+
+[project.scripts]
+early-stopping-is-self-care = "early_stopping_is_self_care.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/early_stopping_is_self_care"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "CONTRIBUTING.md", "pyproject.toml"]
+
+# PyPI gets the same README, with the merch link re-tagged utm_source=pypi.
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/markdown"
+
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.fragments]]
+path = "README.md"
+
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
+pattern = 'utm_source=github&utm_medium=readme'
+replacement = 'utm_source=pypi&utm_medium=readme'
+
+# Relative links do not resolve on PyPI.
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
+pattern = '\]\((LICENSE|CONTRIBUTING\.md)\)'
+replacement = '](https://github.com/sooverfit/early-stopping-is-self-care/blob/main/\1)'
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning"]
