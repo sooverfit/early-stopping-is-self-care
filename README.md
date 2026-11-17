@@ -1,6 +1,7 @@
 # early-stopping-is-self-care
 
 [![Is my run overfitting? (Hugging Face Space)](https://img.shields.io/badge/%F0%9F%A4%97%20Space-is--my--run--overfitting-yellow)](https://huggingface.co/spaces/sooverfit/is-my-run-overfitting)
+[![overfit: probably](https://sooverfit-clicks.utopian-cabbage.workers.dev/badge/overfit.svg)](https://sooverfit-clicks.utopian-cabbage.workers.dev/r/20261117-badge)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 A drop-in companion to your early-stopping callback for **Keras** and
@@ -131,6 +132,14 @@ The jokes are jokes. Early stopping is a real and useful regulariser; this
 package only makes fun of the epochs after your best one. The companion satire
 paper, *Early Stopping Is Self-Care*, is here:
 [early-stopping-is-self-care.pdf](https://huggingface.co/spaces/sooverfit/is-my-run-overfitting/resolve/main/early-stopping-is-self-care.pdf).
+
+## Add the badge to your repo
+
+A joke badge. It reads **overfit | probably** and claims to measure nothing.
+
+```markdown
+[![overfit: probably](https://sooverfit-clicks.utopian-cabbage.workers.dev/badge/overfit.svg)](https://sooverfit-clicks.utopian-cabbage.workers.dev/r/20261117-badge)
+```
 
 ## Made by So Overfit
 
